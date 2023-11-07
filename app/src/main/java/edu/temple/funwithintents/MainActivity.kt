@@ -18,12 +18,12 @@ class MainActivity : AppCompatActivity() {
         findViewById<ImageButton>(R.id.shareImageButton).setOnClickListener {
 
             val intent = Intent().apply {
-                intent.action = Intent.ACTION_SEND
-                intent.type = "text/plain"
-                intent.putExtra(Intent.EXTRA_TEXT, editText.text)
+               action = Intent.ACTION_SEND
+                type = "text/plain"
+                putExtra(Intent.EXTRA_TEXT, editText.text)
 
             }
-startActivity(Intent.createChooser(intent, null))
+            startActivity(Intent.createChooser(intent, null))
 
         }
     }
